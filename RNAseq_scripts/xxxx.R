@@ -1,1 +1,1 @@
-jvkJLVKJ
+getwd()
