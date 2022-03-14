@@ -1,0 +1,121 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(docker4seq)
+> rnaseqCounts( group = "docker", 
++ 	fastq.folder = getwd(), 
++ 	scratch.folder = "/home/rcaloger/scratch", 
++ 	threads = 8, 
++ 	adapter5= "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA", 
++ 	adapter3="AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT", 
++ 	seq.type = "se", 
++ 	min.length = 40, 
++ 	genome.folder = "/home/rcaloger/test/genomes/hg38", 	
++ 	strandness = "none", 
++ 	save.bam = FALSE, 
++ 	org = "hg38", 
++ 	annotation.type = "gtfENSEMBL" ) 
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed5722f63300da7706b8b08e23d49b7bf07b307edadfdbe4ff837662b7306dac150f
+
+Docker ID is:
+ 22f63300da77 
+..
+
+
+Docker exit status: 0 
+
+FastQC analysis is finished
+Error response from daemon: can not get logs from container which is dead or marked for removal
+22f63300da7706b8b08e23d49b7bf07b307edadfdbe4ff837662b7306dac150f
+
+
+Removing the temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying and unzipping
+
+setting as working dir the scratch folder and running skewer docker container
+fee75753a517e0025e89ded8990b5948cf548ff572c6c61593ce4b4e188fcf46
+
+Docker ID is:
+ fee75753a517 
+....
+
+
+Docker exit status: 0 
+
+skewer step is finished
+sh: 1: Syntax error: Bad fd number
+fee75753a517e0025e89ded8990b5948cf548ff572c6c61593ce4b4e188fcf46
+
+
+Removing trimmed temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed57
+creating a folder in scratch folder
+
+copying 
+
+setting as working dir the scratch folder and running  docker container
+ace0d1c1b1ba2c5685433afad798040c574e9ab85fbbe7d88e19cf102d69678b
+
+Docker ID is:
+ ace0d1c1b1ba 
+..............................
+
+
+Docker exit status: 0 
+
+The RSEM STAR analysis is finished
+sh: 1: Syntax error: Bad fd number
+ace0d1c1b1ba2c5685433afad798040c574e9ab85fbbe7d88e19cf102d69678b
+
+
+Removing the rsemStar temporary file ....
+
+ In your system the following version of Docker is installed:
+Docker version 20.10.12, build e91ed573bac5ef49ac16c274b75af2309acdc824ec3d54ff6442256384e25aefaccc7cd
+
+Docker ID is:
+ 3bac5ef49ac1 
+.......
+
+
+Docker exit status: 0 
+
+GTF based annotation is finished is finished
+sh: 1: Syntax error: Bad fd number
+3bac5ef49ac16c274b75af2309acdc824ec3d54ff6442256384e25aefaccc7cd
+rm: cannot remove '*.fastq': No such file or directory
+rm: cannot remove '*trimmed-pair*': No such file or directory
+[1] 0
+Warning messages:
+1: In system("rm *.fastq", intern = TRUE) :
+  running command 'rm *.fastq' had status 1
+2: In system("rm *trimmed-pair*", intern = TRUE) :
+  running command 'rm *trimmed-pair*' had status 1
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  4.460   2.795 400.093 

@@ -1,0 +1,19 @@
+skewer v0.0.1
+fastq folder /data/scratch/Mon-Mar-14-16-23-44-2022
+fwd adapter AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+rev adapter AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+R1 fastq ra1m.R1.fastq
+SE
+n. threads 8
+output folder /home/rcaloger/test/RNAseq_data
+min length out reads 40
+user run time mins 1e-04
+system run time mins 8.33333333333332e-05
+elapsed run time mins 0.564983333333333
+rsem-star v0.0.1
+RSEM user run time mins 0.000316666666666666
+RSEM system run time mins 0.000166666666666667
+RSEM elapsed run time mins 4.88778333333333
+rsemannoByGtf user run time mins 1e-04
+rsemannoByGtf system run time mins 1.66666666666667e-05
+rsemannoByGtf elapsed run time mins 1.02028333333333
